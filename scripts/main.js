@@ -31,7 +31,10 @@
       }
     }).then(function(data) {
       console.log(data);
-      $('.content').append(JST['repo-item'](data));
+      $('.content').append(JST['repo-item']((data.sort(function(a, b){
+         var dateA = new Date(a.created_at), dateB = new Date(b.created_at)
+         return dateA-dateB;
+        })).reverse()));
     });
 
    	var code = window.location.href.match(/\?code=(.*)/)[1];
