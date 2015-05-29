@@ -1,0 +1,9 @@
+- [ ] console.log repo name, updated at, language, stars, and forks
+- [ ] console.log avatar, url, name, username, employer, location, email, blog url, join date
+- [ ] write templates for dynamic sections
+	- [ ] user templates
+	- [ ] list of repositories (single list template with #each, or a li template)
+- [ ] Static HTML
+	- [ ] top content
+	- [ ] user container
+	- [ ] list container
