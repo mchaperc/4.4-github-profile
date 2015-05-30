@@ -1,0 +1,28 @@
+.bottom-nav .outer-container {
+	border-top: 1px solid $light-gray-border;
+	margin-top: 3em;
+}
+
+.bottom-nav {
+	text-align: center;
+}
+
+.bottom-nav-standard-links li,
+.bottom-nav-github-links li,
+.bottom-nav ul,
+.bottom-nav i {
+	display: inline-block;
+}
+
+.bottom-nav-standard-links {
+	float: left;
+}
+
+.bottom-nav .outer-container a {
+	position: relative;
+	top: 10%;
+}
+
+.bottom-nav-github-links {
+	float: right;
+}

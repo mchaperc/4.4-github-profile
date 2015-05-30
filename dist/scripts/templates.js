@@ -59,11 +59,26 @@ this["JST"]["sidebar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
     + alias3(((helper = (helper = helpers.blog || (depth0 != null ? depth0.blog : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"blog","hash":{},"data":data}) : helper)))
     + "\" class=\"user-website\">"
     + alias3(((helper = (helper = helpers.blog || (depth0 != null ? depth0.blog : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"blog","hash":{},"data":data}) : helper)))
-    + "</a><br>\n  <i class=\"octicon octicon-clock\"></i> <p class=\"user-joined\">"
+    + "</a><br>\n  <i class=\"octicon octicon-clock\"></i> <p class=\"user-joined\">Joined on "
     + alias3(((helper = (helper = helpers.created_at || (depth0 != null ? depth0.created_at : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"created_at","hash":{},"data":data}) : helper)))
-    + "</p>\n</div>\n<div class=\"user-social-numbers\">\n  <a href=\"\" class=\"user-follower\">\n    <h4>"
+    + "</p>\n</div>\n<div class=\"user-social-numbers\">\n  <a href=\"http://github.com/"
+    + alias3(((helper = (helper = helpers.login || (depth0 != null ? depth0.login : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"login","hash":{},"data":data}) : helper)))
+    + "/followers\" class=\"user-follower\">\n    <h4>"
     + alias3(((helper = (helper = helpers.followers || (depth0 != null ? depth0.followers : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"followers","hash":{},"data":data}) : helper)))
-    + "</h4>\n    <p>Follower</p>\n  </a>\n  <a href=\"\" class=\"user-starred\">\n    <h4>0</h4>\n    <p>Starred</p>\n  </a>\n  <a href=\"\" class=\"user-following\">\n    <h4>"
+    + "</h4>\n    <p>Follower</p>\n  </a>\n  <a href=\"\" class=\"user-starred\">\n    <h4>0</h4>\n    <p>Starred</p>\n  </a>\n  <a href=\"http://github.com/"
+    + alias3(((helper = (helper = helpers.login || (depth0 != null ? depth0.login : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"login","hash":{},"data":data}) : helper)))
+    + "/following\" class=\"user-following\">\n    <h4>"
     + alias3(((helper = (helper = helpers.following || (depth0 != null ? depth0.following : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"following","hash":{},"data":data}) : helper)))
     + "</h4>\n    <p>Following</p>\n  </a>\n</div>\n<div class=\"user-organizations\">\n  <h3 class=\"user-organizations-heading\">Organizations</h3>\n</div>";
+},"useData":true});
+this["JST"]["top-nav-user"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "<a href=\""
+    + alias3(((helper = (helper = helpers.url || (depth0 != null ? depth0.url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"url","hash":{},"data":data}) : helper)))
+    + "\" class=\"top-nav-profile-links\"><img src=\""
+    + alias3(((helper = (helper = helpers.avatar_url || (depth0 != null ? depth0.avatar_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"avatar_url","hash":{},"data":data}) : helper)))
+    + "\" alt=\"\">"
+    + alias3(((helper = (helper = helpers.login || (depth0 != null ? depth0.login : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"login","hash":{},"data":data}) : helper)))
+    + "</a>";
 },"useData":true});

@@ -9,6 +9,7 @@
     "neat": "~1.7.2",
     "handlebars": "~3.0.3",
     "underscore": "~1.8.3",
-    "octicons": "~2.2.3"
+    "octicons": "~2.2.3",
+    "moment": "~2.10.3"
   }
 }
