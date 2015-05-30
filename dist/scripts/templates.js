@@ -65,7 +65,7 @@ this["JST"]["sidebar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
     + alias3(((helper = (helper = helpers.login || (depth0 != null ? depth0.login : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"login","hash":{},"data":data}) : helper)))
     + "/followers\" class=\"user-follower\">\n    <h4>"
     + alias3(((helper = (helper = helpers.followers || (depth0 != null ? depth0.followers : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"followers","hash":{},"data":data}) : helper)))
-    + "</h4>\n    <p>Follower</p>\n  </a>\n  <a href=\"\" class=\"user-starred\">\n    <h4>0</h4>\n    <p>Starred</p>\n  </a>\n  <a href=\"http://github.com/"
+    + "</h4>\n    <p>Follower</p>\n  </a>\n  <a href=\"http://github.com/stars\" class=\"user-starred\">\n    <h4>0</h4>\n    <p>Starred</p>\n  </a>\n  <a href=\"http://github.com/"
     + alias3(((helper = (helper = helpers.login || (depth0 != null ? depth0.login : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"login","hash":{},"data":data}) : helper)))
     + "/following\" class=\"user-following\">\n    <h4>"
     + alias3(((helper = (helper = helpers.following || (depth0 != null ? depth0.following : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"following","hash":{},"data":data}) : helper)))
