@@ -1,5 +1,5 @@
-// (function(){
-//   'use strict';
+(function(){
+  'use strict';
 
   $(document).ready(function(e){
     var token = localStorage.getItem('GITHUB_TOKEN');
@@ -83,7 +83,6 @@
       } else if(Number(difference) < 2592000000) {
         return (Math.round(difference / 86400000)).toString() + " days ago";
       } else {
-        // moreThanAMonth(item);
         return shortHandDate(updated);
       }
     }
@@ -168,4 +167,4 @@
     window.location.replace('https://github.com/login/oauth/authorize?client_id=c76a5cce9a1d3c44517e');
   });
 
-// })();
+})();
