@@ -67,9 +67,34 @@
     }
 
     function repoData(data) {
-      console.log(data);
+      _.each(data, function(item) {
+        var today = new Date();
+        var difference = today - (new Date(item.updated_at));
+        console.log(difference);
+        return item.updated = updatedLast(difference, item.updated_at);
+      });
       $('.content').append(JST['repo-item'](data.sort(sortRepos).reverse()));
       return data;
+    }
+
+    function updatedLast(difference, updated) {
+      if (Number(difference) < 86400000) {
+        return lessThanADay[difference](difference);
+      } else if(Number(difference) < 2592000000) {
+        return (Math.round(difference / 86400000)).toString() + " days ago";
+      } else {
+        // moreThanAMonth(item);
+        return shortHandDate(updated);
+      }
+    }
+
+    function shortHandDate(updated) {
+      var myDate = updated.slice(0,10).split('-');
+      var myMonth = months[myDate[1]]();
+      if (Number(myDate[2]) < 10) {
+        myDate[2] = myDate[2].slice(1,2);
+      }
+      return updated = myMonth + ' ' + myDate[2];
     }
 
     function fixDate(data) {
@@ -125,6 +150,18 @@
       '12': function() {
         return 'Dec';
       },
+    }
+
+    var lessThanADay = {
+      '60000': function(item) {
+        return (Math.round(item / 1000)).toString() + ' seconds ago'
+      },
+      '3600000': function(item) {
+        return (Math.round(item / 60000)).toString() + ' minutes ago'
+      },
+      '86400000': function(item) {
+        return (Math.round(item /3600000)).toString() + ' hours ago'
+      }
     }
 
     $(document).on('click', '.login', function(e){

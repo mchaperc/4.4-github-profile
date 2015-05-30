@@ -13,8 +13,8 @@ this["JST"]["repo-item"] = Handlebars.template({"1":function(depth0,helpers,part
     + alias3(((helper = (helper = helpers.html_url || (depth0 != null ? depth0.html_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"html_url","hash":{},"data":data}) : helper)))
     + "\">\n      <h3 class=\"repo-item-name\">"
     + alias3(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
-    + "</h3>\n    </a>\n    <p class=\"repo-item-updated\">"
-    + alias3(((helper = (helper = helpers.updated_at || (depth0 != null ? depth0.updated_at : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"updated_at","hash":{},"data":data}) : helper)))
+    + "</h3>\n    </a>\n    <p class=\"repo-item-updated\">Updated "
+    + alias3(((helper = (helper = helpers.updated || (depth0 != null ? depth0.updated : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"updated","hash":{},"data":data}) : helper)))
     + "</p>\n  </div>\n  <div class=\"repo-item-stats\">\n    "
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.language : depth0),{"name":"if","hash":{},"fn":this.program(2, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + " <a href=\"\"><i class=\"fa fa-star\"></i> "
