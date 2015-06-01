@@ -177,8 +177,7 @@
     });
 
     $('.repo-nav-search').on('keyup', function(e) {
-      console.log($('.repo-nav-search').val());
-        searchRepos();
+      searchRepos();
     });
 
     function searchRepos() {
@@ -186,8 +185,6 @@
       var filteredRepos = _.filter(repoArray, function(repo) {
         return repo.name.indexOf(searchTerm) != -1;
       });
-      console.log(filteredRepos);
-      console.log(repoArray);
       $('.repo-list').html('');
       $('.repo-list').append(JST['repo-item'](filteredRepos.sort(sortRepos).reverse()));
     }
