@@ -1,0 +1,48 @@
+.bottom-nav .outer-container {
+	border-top: 1px solid $light-gray-border;
+	margin-top: 3em;
+}
+
+.bottom-nav {
+	text-align: center;
+	padding-bottom: 2em;
+}
+
+.bottom-nav-standard-links li,
+.bottom-nav-github-links li,
+.bottom-nav ul,
+.bottom-nav i {
+	display: inline-block;
+}
+
+.bottom-nav-standard-links {
+	float: left;
+	font-size: .75em;
+	margin-top: 3em;
+	padding: 0;
+}
+
+.bottom-nav-standard-links a,
+.bottom-nav-github-links a {
+	color: $blue;
+	margin-right: 8px;
+}
+
+.bottom-nav-standard-links a:visited,
+.bottom-nav-github-links a:visited {
+	color: $blue;
+}
+
+.bottom-nav-github-links {
+	float: right;
+	font-size: .75em;
+	margin-top: 3em;
+}
+
+.bottom-nav  a.footer-logo {
+	color: $light-gray;
+	font-size: 2em;
+	position: absolute;
+	top: 20px;
+	left: 48%;
+}

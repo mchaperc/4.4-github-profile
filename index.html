@@ -5,17 +5,95 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title></title>
+    <title>4.4 GitHub Profile</title>
 
     <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
-
+    <link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/styles/main.css">
 
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
+    
+    <nav class="top-nav">
+      <div class="outer-container">
+        <div class="top-nav-left">
+          <a href="https://github.com/"><i class="fa fa-github top-nav-github"></i></a>
+          <input type="text" class="top-nav-search" placeholder="Search GitHub">
+          <a href="https://github.com/explore" class="top-nav-link">Explore</a>
+          <a href="https://gist.github.com/" class="top-nav-link">Gist</a>
+          <a href="https://github.com/blog" class="top-nav-link">Blog</a>
+          <a href="https://help.github.com/" class="top-nav-link">Help</a>
+        </div>
+        <div class="top-nav-right">
 
+          <!-- Profile thumbnail and User Name Template inserted here -->
+
+          <a href="https://github.com/new" class="top-nav-profile-links"><i class="octicon octicon-plus"><i class="fa fa-caret-down"></i></i></a>
+          <a href="https://github.com/notifications" class="top-nav-profile-links"><i class="fa fa-inbox"></i></a>
+          <a href="https://github.com/settings/profile" class="top-nav-profile-links"><i class="fa fa-gear"></i></a>
+          <a href="" class="top-nav-profile-links"><i class="octicon octicon-sign-out"></i></a>
+        </div>
+      </div>
+    </nav>
+    <div class="outer-container">
+      <section class="sidebar">
+        <!-- Sidebar Template Inserted Here -->
+      </section>
+      <section class="content">
+        <nav class="profile-nav">
+          <div class="profile-nav-tabs">
+            <a href=""><i class="octicon octicon-diff-added"></i> Contributions</a>
+            <a class="selected-tab" href=""><i class="octicon octicon-repo"></i> Repositories</a>
+            <a href=""><i class="octicon octicon-rss"></i> Public Activity</a>
+          </div>
+          <button class="profile-edit"><i class="fa fa-pencil"></i> Edit Profile</button>
+        </nav>
+        <nav class="repo-nav">
+          <div class="repo-nav-form">
+            <input type="text" class="repo-nav-search" placeholder="Find a repository...">
+            <button class="repo-nav-search-submit">Search</button>
+          </div>
+          <div class="repo-nav-links">
+            <a class="selected-link" href="">All</a>
+            <a href="">Public</a>
+            <a href="">Private</a>
+            <a href="">Sources</a>
+            <a href="">Forks</a>
+            <a href="">Mirrors</a>
+            <button class="repo-new"><i class="octicon octicon-repo"></i> New</button>
+          </div>
+        </nav>
+        <div class="repo-list">
+      <!-- Repo Item Template Inserted Here -->
+        </div>
+      </section>
+    </div>
+      <footer class="bottom-nav">
+        <div class="outer-container">
+        <ul class="bottom-nav-github-links">
+          <li><a href="https://status.github.com/">Status</a></li>
+          <li><a href="https://developer.github.com/">API</a></li>
+          <li><a href="https://training.github.com/">Training</a></li>
+          <li><a href="https://shop.github.com/">Shop</a></li>
+          <li><a href="https://github.com/blog">Blog</a></li>
+          <li><a href="https://github.com/about">About</a></li>
+        </ul>
+        <a class="footer-logo" href="https://github.com/"><i class="fa fa-github"></i></a>
+        <ul class="bottom-nav-standard-links">
+          <li>&copy; 2015 Github, Inc.</li>
+          <li><a href="https://github.com/site/terms">Terms</a></li>
+          <li><a href="https://github.com/site/privacy">Privacy</a></li>
+          <li><a href="https://github.com/security">Security</a></li>
+          <li><a href="https://github.com/contact">Contact</a></li>
+        </ul>
+        </div>
+      </footer>
+    
+    
   <!-- Third Party Scripts -->
+  <script src="bower_components/moment/moment.js"></script>
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
   <script src="bower_components/handlebars/handlebars.js"></script>

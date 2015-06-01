@@ -1,21 +1,44 @@
 @import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
 @import '../bower_components/neat/app/assets/stylesheets/neat';
 
+
 // Typography
 $base-font-family: $helvetica;
 
 // Colors
+$black: rgb(51, 51, 51);
 $blue: #477dca;
-$dark-gray: #333;
+$dark-gray: rgb(120, 120, 120);
 $medium-gray: #999;
-$light-gray: #ddd;
+$light-gray: rgb(204, 204, 204);
 $very-light-gray: #fafafa;
+$nav-light-gray: rgb(245, 245, 245);
+$light-gray-border: rgb(229, 229, 229);
+$blue: rgb(65, 131, 196);
 
 $base-font-color: $dark-gray;
 $base-background-color: $very-light-gray;
+
+@import './_top-nav.scss';
+@import './_sidebar.scss';
+@import './_content.scss';
+@import './_footer.scss';
 
 body {
   font-family: $base-font-family;
   background-color: $base-background-color;
   color: $base-font-color;
+}
+
+a {
+	text-decoration: none;
+}
+
+.outer-container {
+	@include outer-container(980px);
+	position: relative;
+}
+
+input {
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
 }

@@ -1,0 +1,101 @@
+.sidebar {
+	@include span-columns(3);
+	white-space: nowrap;
+	overflow-x: hidden;
+	padding-top: 1em;
+	text-overflow: ellipsis;
+}
+
+.user-basic-info {
+	border-bottom: 1px solid $light-gray-border;
+	margin-bottom: 1em;
+}
+
+.user-basic-info img {
+	border-radius: 5px;
+	max-width: 100%;
+}
+
+.user-full-name {
+	color: $black;
+	margin-top: 5px;
+	margin-bottom: 0;
+}
+
+.user-name {
+	color: $dark-gray;
+	font-weight: 300;
+	margin-top: 0;
+}
+
+.user-profile-info {
+	color: $black;
+}
+
+.user-profile-info i {
+	color: $light-gray;
+}
+
+.user-profile-info {
+	border-bottom: 1px solid $light-gray-border;
+	font-size: .8em;
+	margin-bottom: .5em;
+	padding-bottom: .4em;
+}
+
+.user-profile-info a {
+	color: $blue;
+}
+
+.user-profile-info a:visited {
+	color: $blue;
+}
+
+.user-joined {
+	display: inline-block;
+}
+
+.user-social-numbers {
+	@include clearfix;
+	border-bottom: 1px solid $light-gray-border;
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.user-social-numbers a {
+	color: $blue;
+	text-align: center;
+	@include span-columns(1 of 3);
+}
+
+.user-social-numbers a:visited {
+	color: $blue;
+}
+
+.user-social-numbers a h4 {
+	font-size: 2em;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.user-social-numbers a p {
+	color: $medium-gray;
+	margin-top: 0;
+}
+
+
+.user-social-numbers p {
+	font-size: .75em;
+}
+
+.user-organizations {
+	@include clearfix();
+	color: $black;
+	font-size: .9em;
+}
+
+.organizations img {
+	border-radius: 3px;
+	height: 40px;
+	width: 40px;
+}
