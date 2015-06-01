@@ -25,7 +25,7 @@ gulp.task('styles', function () {
 
 gulp.task('templates', function(){
   gulp.src('templates/*.hbs')
-    .pipe($.handlebars().on('error', $.util.log))
+    .pipe($.handlebars())
     .pipe($.wrap('Handlebars.template(<%= contents %>)'))
     .pipe($.declare({
       namespace: 'JST',

@@ -81,7 +81,14 @@
 
     function updatedLast(difference, updated) {
       if (Number(difference) < 86400000) {
-        return lessThanADay[difference](difference);
+        console.log(difference);
+        if (difference < 60000) {
+          return lessThanADay['seconds'](difference);
+        } else if (difference < 3600000) {
+          return lessThanADay['minutes'](difference);
+        } else {
+          return lessThanADay['hours'](difference);
+        }
       } else if(Number(difference) < 2592000000) {
         return (Math.round(difference / 86400000)).toString() + " days ago";
       } else {
@@ -153,13 +160,13 @@
     }
 
     var lessThanADay = {
-      '60000': function(item) {
+      'seconds': function(item) {
         return (Math.round(item / 1000)).toString() + ' seconds ago'
       },
-      '3600000': function(item) {
+      'minutes': function(item) {
         return (Math.round(item / 60000)).toString() + ' minutes ago'
       },
-      '86400000': function(item) {
+      'hours': function(item) {
         return (Math.round(item /3600000)).toString() + ' hours ago'
       }
     }
