@@ -1,6 +1,8 @@
 (function(){
   'use strict';
 
+  var repoArray = [];
+
   $(document).ready(function(e){
     var token = localStorage.getItem('GITHUB_TOKEN');
     $('body').prepend(JST['application']({loggedIn: !!token}));
@@ -70,10 +72,10 @@
       _.each(data, function(item) {
         var today = new Date();
         var difference = today - (new Date(item.updated_at));
-        console.log(difference);
         return item.updated = updatedLast(difference, item.updated_at);
       });
-      $('.content').append(JST['repo-item'](data.sort(sortRepos).reverse()));
+      $('.repo-list').append(JST['repo-item'](data.sort(sortRepos).reverse()));
+      repoArray = data;
       return data;
     }
 
@@ -103,7 +105,6 @@
         myDate[2] = myDate[2].slice(1,2);
       }
       data.created_at = myMonth + ' ' + myDate[2] + ', ' + myDate[0];
-      console.log(data.created_at);
       return data;
     }
 
@@ -164,7 +165,44 @@
     }
 
     $(document).on('click', '.login', function(e){
-    window.location.replace('https://github.com/login/oauth/authorize?client_id=c76a5cce9a1d3c44517e');
-  });
+      window.location.replace('https://github.com/login/oauth/authorize?client_id=c76a5cce9a1d3c44517e');
+    });
+
+    $('.top-nav-search').on('keypress', function(e) {
+      var code = e.keyCode;
+      if (code === 13) {
+        var searchTerm = $('.top-nav-search').val();
+        window.location.replace('http://github.com/search?utf8=✓&q=' + searchTerm);
+      }
+    });
+
+    $('.repo-nav-search').on('keyup', function(e) {
+      console.log($('.repo-nav-search').val());
+        searchRepos();
+    });
+
+    function searchRepos() {
+      var searchTerm = $('.repo-nav-search').val();
+      var filteredRepos = _.filter(repoArray, function(repo) {
+        return repo.name.indexOf(searchTerm) != -1;
+      });
+      console.log(filteredRepos);
+      console.log(repoArray);
+      $('.repo-list').html('');
+      $('.repo-list').append(JST['repo-item'](filteredRepos.sort(sortRepos).reverse()));
+    }
+
+    $('.repo-nav-search-submit').on('click', function(e) {
+      var searchTerm = $('.repo-nav-search').val();
+      window.location.replace('https://github.com/search?q=user%3A' + repoArray[0].owner.login + '+' + searchTerm);
+    })
+
+    $('.profile-edit').on('click', function(e) {
+      window.location.replace('https://github.com/account');
+    });
+
+    $('.repo-new').on('click', function(e) {
+      window.location.replace('https://github.com/new');
+    })
 
 })();
