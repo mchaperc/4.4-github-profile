@@ -109,7 +109,7 @@
     }
 
     function sortRepos(a, b) {
-      var dateA = new Date(a.created_at), dateB = new Date(b.created_at)
+      var dateA = new Date(a.updated_at), dateB = new Date(b.updated_at)
          return dateA-dateB;
     }
 
