@@ -13,16 +13,27 @@ this["JST"]["repo-item"] = Handlebars.template({"1":function(depth0,helpers,part
     + alias3(((helper = (helper = helpers.html_url || (depth0 != null ? depth0.html_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"html_url","hash":{},"data":data}) : helper)))
     + "\">\n      <h3 class=\"repo-item-name\">"
     + alias3(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
-    + "</h3>\n    </a>\n    <p class=\"repo-item-updated\">Updated "
+    + "</h3>\n    </a>\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.description : depth0),{"name":"if","hash":{},"fn":this.program(2, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.fork : depth0),{"name":"if","hash":{},"fn":this.program(4, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "    <p class=\"repo-item-updated\">Updated "
     + alias3(((helper = (helper = helpers.updated || (depth0 != null ? depth0.updated : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"updated","hash":{},"data":data}) : helper)))
     + "</p>\n  </div>\n  <div class=\"repo-item-stats\">\n    "
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.language : depth0),{"name":"if","hash":{},"fn":this.program(2, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.language : depth0),{"name":"if","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + " <a href=\"\"><i class=\"fa fa-star\"></i> "
     + alias3(((helper = (helper = helpers.stargazers_count || (depth0 != null ? depth0.stargazers_count : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"stargazers_count","hash":{},"data":data}) : helper)))
     + "</a> <a href=\"\"><i class=\"octicon octicon-git-branch\"></i> "
     + alias3(((helper = (helper = helpers.forks_count || (depth0 != null ? depth0.forks_count : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"forks_count","hash":{},"data":data}) : helper)))
     + "</a>\n  </div>\n</div>\n\n";
 },"2":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return "    	<p class=\"repo-description\">"
+    + this.escapeExpression(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"description","hash":{},"data":data}) : helper)))
+    + "</p>\n";
+},"4":function(depth0,helpers,partials,data) {
+    return "	    <p class=\"repo-forked\"><i class=\"octicon octicon-repo-forked\"></i> forked from <a href=\"\"></a></p>\n";
+},"6":function(depth0,helpers,partials,data) {
     var helper;
 
   return "<p>"

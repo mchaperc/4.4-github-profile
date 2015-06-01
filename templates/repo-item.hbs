@@ -5,6 +5,12 @@
     <a href="{{html_url}}">
       <h3 class="repo-item-name">{{name}}</h3>
     </a>
+    {{#if this.description}}
+    	<p class="repo-description">{{description}}</p>
+   	{{/if}}
+    {{#if this.fork}}
+	    <p class="repo-forked"><i class="octicon octicon-repo-forked"></i> forked from <a href=""></a></p>
+	{{/if}}
     <p class="repo-item-updated">Updated {{updated}}</p>
   </div>
   <div class="repo-item-stats">
